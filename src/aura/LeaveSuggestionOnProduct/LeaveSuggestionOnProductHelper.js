@@ -44,7 +44,6 @@
             var state = response.getState();
             if (state === "SUCCESS") {
                 var n = response.getReturnValue();
-                console.log('n is ' + n);
                 if (n != null) {
                     diagMsg = 'Thank you for submitting your suggestion';
                     swal({
