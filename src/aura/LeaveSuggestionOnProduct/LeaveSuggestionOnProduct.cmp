@@ -1,0 +1,38 @@
+<aura:component implements="forceCommunity:availableForAllPageTypes,force:hasRecordId" controller='LeaveSuggestionOnProductController'>
+    <ltng:require styles="{!$Resource.SweetAlert2CSS}" />
+    <ltng:require scripts="{!$Resource.SweetAlert2JS}" />
+    <ltng:require scripts="{!$Resource.LightningDesignSystem}" />
+    <aura:attribute name="recordId" type="Id" />
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}" />
+    <div class="slds" aura:id="isProduct">
+        <div class="slds-modal" aria-hidden="false" role="dialog" aura:id="modal">
+            <div class="slds-modal__container">
+                <div class="slds-modal__header">
+                    <button class="slds-button  slds-modal__close" onclick="{!c.closeModal}">
+                        <lightning:icon iconName="utility:close" variant="bare" />
+                        <!--<img src="{!$Resource.Close_button}"/>-->
+                    </button>
+                    <h2 class="slds-text-heading--medium">Submit Feedback</h2>
+                </div>
+                <div class="slds-modal__content slds-p-around--medium">
+                    <div>
+                        <div class="slds-form-element">
+                            <label class="slds-form-element__label" for="textarea-input-01">
+                                <abbr class="slds-required" title="required">*</abbr> Description: </label>
+                            <div class="slds-form-element__control">
+                                <ui:inputTextArea aura:id="description" class="slds-textarea" placeholder="Please enter your feedback" required="true" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="slds-modal__footer">
+                    <ui:button class="slds-button slds-button--neutral" press="{!c.closeModal}">Cancel</ui:button>
+                    <ui:button class="slds-button slds-button--neutral slds-button--brand" press="{!c.submitSuggestion}">Submit</ui:button>
+                </div>
+            </div>
+        </div>
+        <div class="slds-backdrop" aura:id="backdrop"></div>
+        <!-- Button To Open Modal -->
+        <ui:button class="slds-button slds-button--neutral" press="{!c.openModal}">Submit Feedback</ui:button>
+    </div>
+</aura:component>
