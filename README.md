@@ -3,8 +3,3 @@ User story: We need to enable our community users to leave a suggestion on produ
 Resources used:
 Lightning Design System - [Download](https://www.lightningdesignsystem.com/downloads/);
 Sweet Alert 2 - [Download](https://cdnjs.com/libraries/limonte-sweetalert2)
-
-Demo video:
-
-https://vimeo.com/229482074
-
