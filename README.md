@@ -1,4 +1,4 @@
-User story: We need to enable our community users to leave a suggestion on products. Something like text box they can fill out. We also need to have that feedback stored in some kind of object with information about user who posted it, his Name, Account Name, and of course Product Name.
+Simple demonstration of Aura component that can be used to collect feedback on community.
 
 Resources used:
 Lightning Design System - [Download](https://www.lightningdesignsystem.com/downloads/);
